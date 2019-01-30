@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+body{
+	background-color:lightblue;
+	text-align:center;
+	padding:30px;
+}
+</style>
+</head>
+<body>
+<form>
+	<div class="form-group">
+		<label for="mobileNo">Enter your Mobile-No</label><br>
+		<input required ngModel name="mobileNo" #mobileNo="ngModel" (change)="log(mobileNo)" id="mobileNo" type="text" class="form-control"><br><br>
+		<div class="alert alert-danger" *ngIf="!mobileNo.valid"></div>
+	</div>
+		<div class="form-group">
+		<label for="text">Enter your Text</label><br>
+		<input required ngModel name="text" id="text" type="textarea" rows="10" cols="30" class="form-control">
+	</div>
+	<button class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
